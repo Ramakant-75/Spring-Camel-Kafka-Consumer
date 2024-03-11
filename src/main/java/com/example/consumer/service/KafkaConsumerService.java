@@ -17,7 +17,7 @@ public class KafkaConsumerService {
         log.info("{} messaged you : {},{}",record.topic(),message,new Date());
     }
 
-    @KafkaListener(topics = "nikhil",groupId = "myGroup")
+    @KafkaListener(topics = "test-1",groupId = "myGroup")
     public void consumeChat(String message, ConsumerRecord<String,String> record){
         log.info("{} messaged you : {}",record.topic(),message);
 
